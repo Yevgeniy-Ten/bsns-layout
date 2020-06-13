@@ -1,12 +1,24 @@
 $minwidth: 320px;
-$dekstop: 1170+12;
+$xl-dekstop: 1218;
+$xs-dekstop: $xl-dekstop+12;
 $tablet-rotate: 992;
 $tablet: 768;
 $tel: 480;
+$white:#fff;
+$titlecolor:#333333;
+$orange:#E7A651;
 @import "_mixins.scss";
+@import "_icons.scss";
 
 body {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: rgba(51, 51, 51, 0.5);
+  font-size: 16px;
+  line-height: 32px;
+  font-family: "Heebo", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
 }
 
 .wrapper {
@@ -15,16 +27,20 @@ body {
 }
 
 .container {
-  max-width: $dekstop + px;
+  max-width: $xl-dekstop+px;
   margin: 0 auto;
+
+  @include xs-dekstop {
+    max-width: 970px;
+  }
 
   @include tablet-rotate {
     max-width: 750px;
   }
 
   @include tablet {
-    max-width: none;
     padding: 0 10px;
+    max-width: none;
   }
 }
 

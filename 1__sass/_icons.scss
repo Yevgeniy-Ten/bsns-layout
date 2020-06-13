@@ -1,0 +1,83 @@
+.circle-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: 0.3s;
+
+    @include tablet {
+        width: 60px;
+        height: 60px;
+    }
+
+    &--blue {
+        background: #3576EC;
+
+        &:hover {
+            background-color: darken(#3576EC, 15);
+        }
+    }
+
+    &--medium {
+        width: 65px;
+        height: 65px;
+
+        @include tel {
+            width: 35px;
+            height: 35px;
+        }
+    }
+
+    &--small {
+        width: 45px;
+        height: 45px;
+
+        @include tel {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &--green {
+        background: #55B184;
+    }
+
+    &--darken {
+        background: #3d4e93;
+    }
+
+    &--purple {
+        background-color: #6C4DC2;
+
+        &:hover {
+            background-color: lighten(#6C4DC2, 10);
+        }
+    }
+
+    &--search-ic {
+        background-image: url(../design/search-ic.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 45%;
+        user-select: none;
+        cursor: pointer;
+
+        &:hover {
+            transform: rotate(360deg);
+        }
+    }
+
+    &--customers {
+        background-image: url(../design/customers-ic.png);
+        background-repeat: no-repeat;
+        background-position: 55% 50%;
+        background-size: 45%;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    &__item {
+        &--up {}
+
+        &--customers {}
+    }
+}
