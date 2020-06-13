@@ -1,0 +1,74 @@
+@mixin dekstop () {
+    @media (max-width: $dekstop+px) {
+        @content;
+    }
+}
+
+@mixin tablet-rotate () {
+    @media (max-width: $tablet-rotate+px) {
+        @content;
+    }
+}
+
+@mixin tablet () {
+    @media (max-width: $tablet+px) {
+        @content;
+    }
+}
+
+@mixin tel () {
+    @media (max-width: $tel+px) {
+        @content;
+    }
+}
+
+@mixin from-tablet-rotate () {
+    @media (min-width: $tablet-rotate+px) {
+        @content;
+    }
+}
+
+@mixin from-tablet () {
+    @media (min-width: $tablet+px) {
+        @content;
+    }
+}
+
+@mixin from-tel () {
+    @media (min-width: $tel+px) {
+        @content;
+    }
+}
+
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $addMobSize: $addSize + $addSize * 0.7;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$dekstop}));
+
+    @media (max-width: $tablet+px) {
+        font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$dekstop}));
+    }
+}
+
+@mixin input-placeholder {
+    &.placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
