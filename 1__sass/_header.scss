@@ -218,11 +218,13 @@
         background: url(../design/nice.png) no-repeat right 30% /23px 23px;
     }
 
-    &__rate {
+    &__rate,
+    &__love {
         position: absolute;
         max-width: 120px;
         bottom: 10%;
         left: -15px;
+        z-index: 3;
 
         @include tablet {
             max-width: 50px;
@@ -270,6 +272,8 @@
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
+    color: $white;
+    text-align: center;
 
     &:hover {
         box-shadow: 0 3px 3px darken($orange, 20);

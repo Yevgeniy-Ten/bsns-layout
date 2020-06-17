@@ -48,6 +48,10 @@
 
     &--darken {
         background: #3d4e93;
+
+        &:hover {
+            background-color: lighten(#3d4e93, 15);
+        }
     }
 
     &--purple {
@@ -58,7 +62,8 @@
         }
     }
 
-    &--search-ic {
+    &--search-ic,
+    &--message {
         background-image: url(../design/search-ic.png);
         background-repeat: no-repeat;
         background-position: center;
@@ -80,30 +85,52 @@
         cursor: pointer;
     }
 
+    &--analys,
+    &--advices,
+    &--solut,
+    &--strategies,
+    &--human,
+    &--fire,
     &--marketing {
-        background-image: url(../design/plan-ic.svg);
+
         background-repeat: no-repeat;
         background-position: center;
         background-size: 33%;
         user-select: none;
         cursor: pointer;
+    }
+
+    &--marketing {
+        background-image: url(../design/plan-ic.svg);
+
     }
 
     &--fire {
         background-image: url(../design/fire-ic.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 33%;
-        user-select: none;
-        cursor: pointer;
+
     }
 
     &--human {
         background-image: url(../design/human-ic.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 33%;
-        user-select: none;
-        cursor: pointer;
+    }
+
+    &--analys {
+        background-image: url(../design/analys-ic.svg);
+    }
+
+    &--solut {
+        background-image: url(../design/solut-ic.svg);
+    }
+
+    &--advices {
+        background-image: url(../design/advices-ic.svg);
+    }
+
+    &--strategies {
+        background-image: url(../design/strategs-ic.svg);
+    }
+
+    &--message {
+        background-image: url(../design/message-ic.svg);
     }
 }
