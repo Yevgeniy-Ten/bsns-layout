@@ -556,8 +556,7 @@ a {
 }
 
 .info-box {
-  padding: 5% 0;
-  margin: 15px 0;
+  padding: 6% 0;
   background: #273a89 url(../design/decorate.png) no-repeat 50% 700%/150% 90%;
 }
 .info-box__body {
@@ -748,6 +747,136 @@ a {
   color: #fff;
   font-size: 24px;
   font-weight: 900;
+}
+.cases__btn {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.sponsors {
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+.sponsors__title {
+  color: #333333;
+}
+.sponsors__items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 4% 0;
+}
+.sponsors__item {
+  margin-right: 5%;
+  margin-bottom: 5%;
+  width: 16%;
+  padding: 15px;
+  transition: 0.3s;
+  min-width: 160px;
+}
+.sponsors__item:nth-child(5n) {
+  margin-right: 0;
+}
+.sponsors__item:hover {
+  transform: scale(1.2);
+}
+
+.articles {
+  text-align: center;
+  padding: 6% 0;
+}
+.articles__body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+@media (max-width: 768px) {
+  .articles__body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .articles__body {
+    grid-template-columns: 1fr;
+  }
+}
+.articles__blog {
+  display: flex;
+  flex-direction: column;
+}
+.articles__author {
+  display: flex;
+  align-items: center;
+}
+.articles__author-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.articles__avatar {
+  margin: 0 10px 10px 0;
+}
+.articles__author-name {
+  color: #333333;
+  font-family: "Courier Prime", monospace;
+}
+.articles__title {
+  margin: 15px;
+}
+.articles__info {
+  color: #333333;
+  font-size: 24px;
+  font-weight: 900;
+  flex-grow: 1;
+  margin: 0 0 15px 0;
+}
+
+.map {
+  background: url(../design/map.png) no-repeat center/cover;
+  padding: 20% 0 10%;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .map {
+    padding: 200px 0 10%;
+  }
+}
+.map__geolocation {
+  position: absolute;
+  left: 20%;
+  top: 15%;
+}
+.map__box {
+  display: flex;
+  justify-content: flex-end;
+}
+.map__form {
+  border-radius: 50px;
+  background: #FFFFFF;
+}
+.map__form-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 35px 40px 50px;
+}
+.map__form-input, .map__form-textarea {
+  width: 100%;
+  border: 1px solid #DADADA;
+  border-radius: 5px;
+  padding: 13px;
+}
+.map__form-input {
+  margin: 0 0 15px 0;
+}
+.map__form-textarea {
+  margin: 0 0 20px 0;
+}
+.map__btn {
+  width: 100%;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
