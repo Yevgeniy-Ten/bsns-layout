@@ -85,10 +85,12 @@
 }
 
 @mixin grid($cols, $margin) {
-    margin: 0 $margin+px $margin+px 0;
-    flex: 1 1 ((100%-(($cols-1)*$margin) /$cols));
+    margin-right: $margin;
+    margin-bottom: $margin;
+
+    width: ((100%-(($cols - 1)*$margin))/$cols);
 
     &:nth-child(#{$cols}n) {
-        margin: 0 0 $margin+px 0;
+        margin-right: 0;
     }
 }
