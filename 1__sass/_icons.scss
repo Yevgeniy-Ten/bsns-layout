@@ -3,6 +3,7 @@
     height: 100px;
     border-radius: 50%;
     transition: 0.3s;
+    overflow: hidden;
 
     @include tablet {
         width: 60px;
@@ -22,8 +23,8 @@
         height: 65px;
 
         @include tel {
-            width: 35px;
-            height: 35px;
+            width: 45px;
+            height: 45px;
         }
     }
 
@@ -38,7 +39,11 @@
     }
 
     &--green {
-        background: #55B184;
+        background-color: #55B184;
+
+        &:hover {
+            background-color: darken(#55B184, 30);
+        }
     }
 
     &--darken {
@@ -75,9 +80,30 @@
         cursor: pointer;
     }
 
-    &__item {
-        &--up {}
+    &--marketing {
+        background-image: url(../design/plan-ic.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 33%;
+        user-select: none;
+        cursor: pointer;
+    }
 
-        &--customers {}
+    &--fire {
+        background-image: url(../design/fire-ic.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 33%;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    &--human {
+        background-image: url(../design/human-ic.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 33%;
+        user-select: none;
+        cursor: pointer;
     }
 }

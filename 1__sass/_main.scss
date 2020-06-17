@@ -1,0 +1,95 @@
+.offers {
+    padding: 20px 0 5px;
+
+    &__body {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__col {
+        display: flex;
+        flex: 1 1 25%;
+        margin-right: 20px;
+        margin: 0 15px 15px 0;
+        align-items: center;
+        min-width: 200px;
+
+        @include tablet {
+            flex-wrap: wrap;
+        }
+
+        @include tel {
+            margin: 0 0 15px 0;
+        }
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+
+    &__img {
+        margin: 0 15px 0 0;
+    }
+
+    &__subtext {
+        margin: 3px 0 0 0;
+        @include prime;
+    }
+}
+
+.small-label {
+    color: $title-color;
+    font-weight: 900;
+}
+
+.section__title {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    color: $title-color;
+    text-align: center;
+    padding: 15px;
+}
+
+.tools {
+    &__body {
+        padding: 2% 0;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+
+    &__item {
+        position: relative;
+        max-height: 260px;
+    }
+
+    &__label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-radius: 0px 20px;
+        width: 30%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--blue {
+            background: #3576EC;
+        }
+
+        &--green {
+            background: #55B184;
+        }
+
+        &--purple {
+            background: #E7A651;
+        }
+    }
+}
