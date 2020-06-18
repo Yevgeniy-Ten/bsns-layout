@@ -230,6 +230,11 @@
             max-width: 50px;
         }
     }
+
+    &__networks {
+        justify-content: space-around;
+        margin: 30px 0 0 0;
+    }
 }
 
 .bsns-img {
